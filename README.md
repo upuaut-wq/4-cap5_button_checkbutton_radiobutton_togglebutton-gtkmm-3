@@ -4,7 +4,7 @@ Apresenta um app com demostrações de alguns tipos de botões da API GTKMM3.0
 
 * ## App
 
-    ![](DOC/APP.gif)
+    ![](DOC/app.gif)
 
 * ### Tipos de Botões 
 
@@ -14,7 +14,7 @@ Apresenta um app com demostrações de alguns tipos de botões da API GTKMM3.0
 
     * `Gtk::ToggleButton`, possui todas as características do tipo `GtK::Button`, porém, ao ser pressionado ele fica no estado pressionado. 
 
-        ![](DOC/toggleb.png)     
+        ![](DOC/toggleb.png)     s
 
     * `Gtk::CheckButton`, observe que assim como os ``Gtk::Button`, pode ser adicionado imagem, imagem e label ou somente label.
 
