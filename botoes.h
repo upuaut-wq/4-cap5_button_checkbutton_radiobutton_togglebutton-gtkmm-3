@@ -24,6 +24,7 @@ class Botoes: public Gtk::Window{
         bool on_btn_tooltip(int x, int y,bool keyboard_tooltip,const Glib::RefPtr<Gtk::Tooltip> &tooltip);
         void on_alt_img_button();
         void on_hid_button();
+        void on_togbtn_alt();
 
         //Widgets
         //Boxs

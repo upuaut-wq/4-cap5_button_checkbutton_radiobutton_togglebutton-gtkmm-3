@@ -47,11 +47,11 @@ Botoes::Botoes():m_tooltip(Gtk::WINDOW_POPUP){ //Define o tipo de Window para to
     this->m_lb5.set_halign(Gtk::ALIGN_END);
 
     //Adiciona nome aos labels.
-    this->m_lb1.set_label("Botão Normal --> ");
-    this->m_lb2.set_label("Botão Liga Desliga --> ");
-    this->m_lb3.set_label("Botão Check Button --> ");
-    this->m_lb4.set_label("Botão de Escolha 1 --> ");
-    this->m_lb5.set_label("Botão de Escolha 2 --> ");
+    this->m_lb1.set_label("Botão Normal ➠ ");
+    this->m_lb2.set_label("Botão Liga Desliga ➠ ");
+    this->m_lb3.set_label("Botão Check Button ➠ ");
+    this->m_lb4.set_label("Botão de Escolha 1 ➠ ");
+    this->m_lb5.set_label("Botão de Escolha 2 ➠ ");
 
     //Alinhamento dos botoes
     this->m_btn.set_valign(Gtk::ALIGN_CENTER);
@@ -59,7 +59,6 @@ Botoes::Botoes():m_tooltip(Gtk::WINDOW_POPUP){ //Define o tipo de Window para to
     this->m_tog_btn.set_valign(Gtk::ALIGN_CENTER);
     this->m_rad_btn1.set_valign(Gtk::ALIGN_CENTER);
     this->m_rad_btn2.set_valign(Gtk::ALIGN_CENTER);
-
 
     //Adicionar os botoes nas caixas
     this->m_box2.pack_start(this->m_btn);
@@ -100,14 +99,21 @@ Botoes::Botoes():m_tooltip(Gtk::WINDOW_POPUP){ //Define o tipo de Window para to
     this->m_ck_btn.set_always_show_image(true);
     this->m_ck_btn.set_image_position(Gtk::POS_RIGHT);
     this->m_ck_btn.signal_clicked().connect(sigc::mem_fun(*this,&Botoes::on_hid_button));
-
-
-
-
     this->show_all_children();
+
+    //Configuração Botão 4 RADIO BUTONS=================================================================
+    this->m_rad_btn1.set_image_from_icon_name("emblem-ohno",Gtk::ICON_SIZE_DIALOG);
+    this->m_rad_btn2.set_image_from_icon_name("emblem-OK",Gtk::ICON_SIZE_DIALOG);
+    this->m_rad_btn1.set_always_show_image(true);
+    this->m_rad_btn2.set_always_show_image(true);
+    //Sinal para alterar as imagens
+    this->m_rad_btn1.signal_clicked().connect(sigc::mem_fun(*this,&Botoes::on_togbtn_alt));
+    this->m_rad_btn2.signal_clicked().connect(sigc::mem_fun(*this,&Botoes::on_togbtn_alt));
+
+    this->m_rad_btn1.set_tooltip_text("Aceita tooltip igual aos botoes comuns...");
+    this->m_rad_btn2.set_tooltip_text("Aceita somente image ou somente label...");
+
 }
-
-
 
 Botoes::~Botoes(){
 
@@ -146,7 +152,6 @@ bool Botoes::on_btn_tooltip(int, int, bool, const Glib::RefPtr<Gtk::Tooltip>&){
     return true;
 }   
 
-
 //Altera o label e imagem do botão toggle button
 void Botoes::on_alt_img_button(){
     if(this->m_tog_btn.get_active() == false){
@@ -159,7 +164,6 @@ void Botoes::on_alt_img_button(){
     }
 }
 
-
 void Botoes::on_hid_button(){
     if(this->m_ck_btn.get_active() == true){
         this->m_btn.set_state(Gtk::STATE_INSENSITIVE);
@@ -168,5 +172,17 @@ void Botoes::on_hid_button(){
     }else{
         this->m_btn.set_state(Gtk::STATE_NORMAL);
         this->m_tog_btn.set_state(Gtk::STATE_NORMAL);
+    }
+}
+
+
+
+void Botoes::on_togbtn_alt(){
+    if(this->m_rad_btn1.get_active() == true){
+        this->m_rad_btn1.set_image_from_icon_name("emblem-ohno",Gtk::ICON_SIZE_DIALOG);
+        this->m_rad_btn2.set_image_from_icon_name("emblem-OK",Gtk::ICON_SIZE_DIALOG);
+    }else{
+        this->m_rad_btn2.set_image_from_icon_name("emblem-ohno",Gtk::ICON_SIZE_DIALOG);
+        this->m_rad_btn1.set_image_from_icon_name("emblem-OK",Gtk::ICON_SIZE_DIALOG);
     }
 }
