@@ -2,6 +2,10 @@
 ### OBS: Atenção, este arquivo são anotações de estudo, alguns procedimentos podem não ser corretos.
 Apresenta um app com demostrações de alguns tipos de botões da API GTKMM3.0
 
+* ## App
+
+    ![](DOC/APP.gif)
+
 * ### Tipos de Botões 
 
     * `Gtk::Button`, este tipo de botão foi apresentado no exemplo anterior.
