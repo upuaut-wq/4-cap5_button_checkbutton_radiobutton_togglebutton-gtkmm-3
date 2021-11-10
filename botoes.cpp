@@ -22,6 +22,7 @@ Botoes::Botoes():m_tooltip(Gtk::WINDOW_POPUP){ //Define o tipo de Window para to
 
     //Nome botoes
     this->m_btn.set_label("➊ - Priximo");
+    this->m_btn.set_relief(Gtk::RELIEF_NONE);
     this->m_ck_btn.set_label("Botão Liga desliga");
     this->m_tog_btn.set_image_from_icon_name("gtk-go-down",Gtk::ICON_SIZE_BUTTON);
     this->m_tog_btn.set_label("Precione");
