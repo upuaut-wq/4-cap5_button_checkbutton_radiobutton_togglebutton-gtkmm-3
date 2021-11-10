@@ -14,9 +14,16 @@ Apresenta um app com demostrações de alguns tipos de botões da API GTKMM3.0
 
     * `Gtk::ToggleButton`, possui todas as características do tipo `GtK::Button`, porém, ao ser pressionado ele fica no estado pressionado. 
 
-        ![](DOC/toggleb.png)     s
+        ![](DOC/toggleb.png)     
 
-    * `Gtk::CheckButton`, observe que assim como os ``Gtk::Button`, pode ser adicionado imagem, imagem e label ou somente label.
+        Para deixar o botão desativado e atvado foi utilizado o método:
+        
+        `this->m_btn.set_state(Gtk::STATE_INSENSITIVE)`.
+        
+        `this->m_btn.set_state(Gtk::STATE_NORMAL)`.
+
+    * `Gtk::CheckButton`, observe que assim como os `Gtk::Button`, pode ser adicionado imagem, imagem e label ou somente label.
+
 
         ![](DOC/ckbutton.png)
 
