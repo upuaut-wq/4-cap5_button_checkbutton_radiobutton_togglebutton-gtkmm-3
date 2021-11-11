@@ -2,6 +2,17 @@
 ### OBS: Atenção, este arquivo são anotações de estudo, alguns procedimentos podem não ser corretos.
 Apresenta um app com demostrações de alguns tipos de botões da API GTKMM3.0
 
+## Perguntas respondidas:
+
+* Como criar um widget do tipo Gtk::Button?
+* Como criar um widget do tipo Gtk::ToggleButton?
+* Como criar um widget do tipo Gtk::RadioButton?
+* Como criar um widget do tipo Gtk::CheckButton?
+* Como inserir icones nos botões?
+* Como deixar um botão inativo com a flag Gtk::STATE_INSENSITIVE?
+* Como criar grupo para o Gtk::RadioButton?
+* Como inserir tooltips do tipo text, markup e window?
+
 * ## App
 
     ![](DOC/app.gif)
@@ -94,7 +105,7 @@ Apresenta um app com demostrações de alguns tipos de botões da API GTKMM3.0
             this->m_tog_btn.signal_query_tooltip().connect(sigc::mem_fun(*this,&Botoes::on_btn_tooltip));
             ~~~
     
-            <span style="color:red"> obs: Vale mencionar, que, para esta última opção depois que inseri o tootip window, não consegui retirar para adicionar um do tipo text.</span>
+            <span style="color:Red"> obs: Vale mencionar, que, para esta última opção depois que inseri o tootip window, não consegui retirar para adicionar um do tipo text.</span>
 
 
      
