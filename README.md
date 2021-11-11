@@ -105,7 +105,7 @@ Apresenta um app com demostrações de alguns tipos de botões da API GTKMM3.0
             this->m_tog_btn.signal_query_tooltip().connect(sigc::mem_fun(*this,&Botoes::on_btn_tooltip));
             ~~~
     
-            <span style="color:Red"> obs: Vale mencionar, que, para esta última opção depois que inseri o tootip window, não consegui retirar para adicionar um do tipo text.</span>
+            _obs: Vale mencionar, que, para esta última opção depois que inseri o tootip window, não consegui retirar para adicionar um do tipo text._
 
 
      
